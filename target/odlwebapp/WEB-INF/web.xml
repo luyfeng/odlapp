@@ -1,0 +1,82 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>loginController</servlet-name>
+        <servlet-class>controller.loginController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginController</servlet-name>
+        <url-pattern>/loginController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>loginCheckController</servlet-name>
+        <servlet-class>controller.loginCheckController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginCheckController</servlet-name>
+        <url-pattern>/loginCheckController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>flowController</servlet-name>
+        <servlet-class>controller.flowController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>flowController</servlet-name>
+        <url-pattern>/flowController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addTableController</servlet-name>
+        <servlet-class>controller.addTableController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addTableController</servlet-name>
+        <url-pattern>/addTableController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>listTableController</servlet-name>
+        <servlet-class>controller.listTableController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>listTableController</servlet-name>
+        <url-pattern>/listTableController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>delTableController</servlet-name>
+        <servlet-class>controller.delTableController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delTableController</servlet-name>
+        <url-pattern>/delTableController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>updateTableController</servlet-name>
+        <servlet-class>controller.updateTableController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateTableController</servlet-name>
+        <url-pattern>/updateTableController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>updateTableUIController</servlet-name>
+        <servlet-class>controller.updateTableUIController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateTableUIController</servlet-name>
+        <url-pattern>/updateTableUIController</url-pattern>
+    </servlet-mapping>
+
+
+
+
+</web-app>
