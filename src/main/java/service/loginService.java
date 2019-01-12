@@ -22,7 +22,7 @@ public class loginService {
     //管理员登录的方法
     public Admin login(String admin, String password) throws SQLException {
 
-        System.out.println("sssssssssssserice");
+        System.out.println("loginsssssssssssseverce");
 
         loginDao dao = new loginDao();
         return dao.login(admin,password);

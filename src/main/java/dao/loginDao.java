@@ -24,7 +24,7 @@ public class loginDao {
     //用户登录的方法
     public Admin login(String admin, String password) throws SQLException {
 
-        System.out.println("dddddddddddddddddao");
+        System.out.println("logindddddddddddddddddao");
 
         QueryRunner runner = new QueryRunner(dataSourceUtils.getDataSource());
         String sql = "select * from admin where admin=? and password=?";

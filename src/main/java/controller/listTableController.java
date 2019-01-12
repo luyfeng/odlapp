@@ -34,7 +34,7 @@ public class listTableController extends HttpServlet {
             e.printStackTrace();
         }
 
-        System.out.println("lllllllllllisttable="+tableList);
+        System.out.println("ccccccontroller---lllllllllllisttable="+tableList);
 
         //将tableList放到request域
         request.setAttribute("tableList",tableList);

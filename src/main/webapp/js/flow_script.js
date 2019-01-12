@@ -47,7 +47,7 @@ $(document).ready(function() {
         };
 
         $.ajax({
-            url: "http://10.1.11.3:8181/restconf/config/opendaylight-inventory:nodes/node/openflow:1/flow-node-inventory:table/0/flow/"+id.val().trim(),
+            url: "http://10.1.11.26:8181/restconf/config/opendaylight-inventory:nodes/node/openflow:1/flow-node-inventory:table/0/flow/"+id.val().trim(),
             type: "put",
             async: "true",
             contentType: 'application/json; charset=utf-8',

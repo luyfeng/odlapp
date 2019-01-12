@@ -4,6 +4,9 @@ import com.google.gson.Gson;
 import domain.NodeConnector.FlowNodeInventory_StateBean;
 import domain.NodeConnector.NodeConnectorBean;
 import domain.NodeConnector.NodeConnectorRootBean;
+import domain.Nodes.NodeBean;
+import domain.Nodes.NodesBean;
+import domain.Nodes.NodesRootBean;
 import domain.TestBean;
 import org.junit.jupiter.api.Test;
 
@@ -16,10 +19,42 @@ import static org.junit.jupiter.api.Assertions.*;
 class OdlUtilTest {
 
     @Test
+    void getNodes() {
+
+        OdlUtil odlUtil = new OdlUtil("10.1.2.1",8181);
+        String str = odlUtil.getNodes();
+        System.out.println(str);
+
+        //gson把json解析成javabean
+        Gson gson = new Gson();
+        NodesRootBean nodesRootBean = gson.fromJson(str,NodesRootBean.class);
+        System.out.println("nodesRootBean="+nodesRootBean);
+
+        NodesBean nodesBean = nodesRootBean.getNodes();
+        List<NodeBean> nodeBeanList = nodesBean.getNode();
+        System.out.println("nodeBeanList="+nodeBeanList);
+
+        for (NodeBean nodeBean : nodeBeanList) {
+            List<domain.Nodes.NodeConnectorBean> nodeConnectorBeanList = nodeBean.getNodeConnector();
+            System.out.println("nodeConnectorBeanList="+nodeConnectorBeanList);
+            for (domain.Nodes.NodeConnectorBean nodeConnectorBean : nodeConnectorBeanList){
+                String hardwareAddress = nodeConnectorBean.getFlowNodeInventory_HardwareAddress();
+                System.out.println("hardwareAddress="+hardwareAddress);
+            }
+        }
+
+//        String nodeConnectorBeanList = nodesRootBean.getNodes().getNode().get(0).getNodeConnector().get(0).getFlowNodeInventory_HardwareAddress();
+
+
+
+
+    }
+
+    @Test
     void getNode_Connector() {
 
 //        System.out.println(Base64.getEncoder().encodeToString(("admin" + ":" + "admin").getBytes()));
-        OdlUtil odlUtil = new OdlUtil("10.1.11.26",8181);
+        OdlUtil odlUtil = new OdlUtil("10.1.2.1",8181);
         String str  = null;
         str = odlUtil.getNode_Connector();
 
@@ -36,8 +71,10 @@ class OdlUtilTest {
 //        String nodeConnectorBean = nodeConnectorBeanList.get(0).getFlowNodeInventory_HardwareAddress();
 //
         for ( NodeConnectorBean nodeConnectorBean :  nodeConnectorBeanList){
-            String FlowNodeInventory_HardwareAddress = nodeConnectorBean.getFlowNodeInventory_PortNumber();
+            boolean FlowNodeInventory_HardwareAddress = nodeConnectorBean.getFlowNodeInventory_State().isLive();
+            String a = nodeConnectorBean.getFlowNodeInventory_HardwareAddress();
             System.out.println(FlowNodeInventory_HardwareAddress);
+            System.out.println(a);
         }
 
         String json = gson.toJson(nodeConnectorRootBean);

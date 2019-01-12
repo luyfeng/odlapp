@@ -33,7 +33,7 @@ public class loginController extends javax.servlet.http.HttpServlet {
         Admin message = null;
         try {
             message = service.login(admin,password);
-            System.out.println("999999999===="+message);
+            System.out.println("999999999message===="+message);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -44,8 +44,7 @@ public class loginController extends javax.servlet.http.HttpServlet {
 
 
             //重定向到首页
-            response.sendRedirect("/listTableController" +
-                    "");
+            response.sendRedirect("/listTableController");
         }else{
 //            request.setAttribute("loginError", "用户名或密码错误");
 //            request.getRequestDispatcher("/login.jsp").forward(request, response);

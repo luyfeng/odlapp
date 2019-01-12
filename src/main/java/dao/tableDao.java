@@ -29,7 +29,7 @@ public class tableDao {
         QueryRunner runner = new QueryRunner(dataSourceUtils.getDataSource());
         String sql = "select * from flowtb";
         List<Table> tableList = runner.query(sql, new BeanListHandler<Table>(Table.class));
-        System.out.println("dddddlllllllllllisttable="+tableList);
+        System.out.println("daodddddlllllllllllisttable="+tableList);
         return tableList;
     }
 

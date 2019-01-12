@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c3p0-config>
     <default-config>
-        <property name="user">esix</property>
-        <property name="password">esix123</property>
+        <property name="user">root</property>
+        <property name="password">abcd1234</property>
         <property name="driverClass">com.mysql.jdbc.Driver</property>
-        <property name="jdbcUrl">jdbc:mysql://10.1.3.28:3306/odlwebapp</property>
+        <property name="jdbcUrl">jdbc:mysql://10.1.2.1:3306/odlwebapp</property>
     </default-config>
 </c3p0-config>

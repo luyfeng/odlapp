@@ -76,6 +76,24 @@
         <url-pattern>/updateTableUIController</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>addNodeConnectorController</servlet-name>
+        <servlet-class>controller.NodeConnector.addNodeConnectorController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addNodeConnectorController</servlet-name>
+        <url-pattern>/addNodeConnectorController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>listAllNodeConnectorController</servlet-name>
+        <servlet-class>controller.NodeConnector.listAllNodeConnectorController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>listAllNodeConnectorController</servlet-name>
+        <url-pattern>/listAllNodeConnectorController</url-pattern>
+    </servlet-mapping>
+
 
 
 
